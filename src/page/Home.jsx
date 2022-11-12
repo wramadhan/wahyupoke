@@ -49,9 +49,8 @@ const Home = () => {
             </div>)
         })) : (<p>Loading...</p>)}
       </div>
-      <p>Ini Halaman home</p>
-      {status ? (status.previous ? (<button className="text-primary fixed inset-y-0 left-0 text-7xl" onClick={() => setPage(page - 20)}><Icon icon="icon-park-outline:handle-triangle" rotate={3} /></button>) : null) : null}
-      {status ? (status.next ? (<button className="text-primary fixed inset-y-0 right-0 text-7xl" onClick={() => setPage(page + 20)}><Icon icon="icon-park-outline:handle-triangle" rotate={1} /></button>) : null) : null}
+      {status ? (status.previous ? (<button className="text-primary fixed inset-y-0 left-0 text-7xl" ><Icon onClick={() => setPage(page - 20)} icon="icon-park-outline:handle-triangle" rotate={3} /></button>) : null) : null}
+      {status ? (status.next ? (<button className="text-primary fixed inset-y-0 right-0 text-7xl" ><Icon onClick={() => setPage(page + 20)} icon="icon-park-outline:handle-triangle" rotate={1} /></button>) : null) : null}
     </div>
   );
 };

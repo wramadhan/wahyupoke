@@ -19,7 +19,7 @@ const Detail = () => {
         axios(config)
             .then(function (response) {
                 setDataDetail(response.data);
-                console.log(response.data.species.name);
+                console.log(response.data.types);
             })
             .catch(function (error) {
                 console.log(error);
@@ -66,9 +66,38 @@ const Detail = () => {
                 </div>
                 {/* Stats End */}
             </div>
-                <div className='mt-[25px] lg:flex justify-between'>
-                    <div className='border-4 lgmax:w-full border-primary w-[49%] h-[357px] rounded-2xl'>
+                <div className='my-[25px] lg:flex justify-between text-primary'>
+                    <div className='border-4 lgmax:my-6 lgmax:w-full border-primary w-[49%] h-[350px] rounded-2xl'>
                         <h1 className='w-full bg-primary rounded-t-md h-50 text-center text-secondary font-bold text-[30px] shadow-inner shadow-tertiary text-2xl py-1'>Details</h1>
+                        <div className='overflow-y-auto overflow-x-auto px-[15px] font-bold smmlmax:text-2xl text-[30px] w-full h-[305px] rounded-b-lg bg-primary/10'>
+                            <h1>Species: {dataDetail.species.name}</h1>
+                            <h2 className='flex my-4'>Types:&nbsp;</h2>
+                            <div className=''>
+                                {dataDetail.types ? (dataDetail.types.map((item, index) => {
+                                    return (
+                                        <div key={index}>
+                                            <li>{item.type.name};</li>
+                                        </div>
+                                    )
+                                })) : (<h1>not yet known</h1>)}</div>
+                            <h2 className='my-4'>Height:&nbsp;{dataDetail.height}</h2>
+                            <h2>Weight:&nbsp;{dataDetail.weight}</h2>
+                            <div className='mt-4'>
+                                <h2>Ability:&nbsp;</h2>
+                                {dataDetail.abilities ? (dataDetail.abilities.map((item, index) => {
+                                    return (
+                                        <div key={index}>
+                                            <li>{item.ability.name};</li>
+                                        </div>
+                                    )
+                                })) : (<h1>not yet known</h1>)}
+                            </div>
+                        </div>
+                    </div>
+                    <div className='border-4 lgmax:w-full border-primary w-[49%] h-[350px] rounded-2xl'>
+                        <h1 className='w-full bg-primary rounded-t-md h-50 text-center text-secondary font-bold text-[30px] shadow-inner shadow-tertiary text-2xl py-1'>Skills</h1>
+                        <div className='px-[15px] font-bold text-[30px] w-full h-[305px] rounded-b-lg bg-primary/10'>
+                        </div>
                     </div>
                 </div>
             </div>) : null}
