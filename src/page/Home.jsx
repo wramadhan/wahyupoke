@@ -35,9 +35,9 @@ const Home = () => {
     navigate(`/detail/${index + page + 1}`, {
       state: {
         url: item.url,
+        name: item.name
       },
     });
-    console.log("ini kena");
   }
   return (
     <div className="pt-[95px] px-[50px]">

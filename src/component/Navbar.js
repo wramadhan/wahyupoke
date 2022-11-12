@@ -16,7 +16,7 @@ const Navbar = () => {
   window.addEventListener("scroll", changeColor);
   return (
     <div
-      className={`px-[25px] w-full py-[16px] shadow-md ${color} flex justify-between dark:bg-primary`}
+      className={`px-[25px] w-full py-[16px] shadow-md ${color} flex justify-between dark:bg-primary shadow-lg `}
     >
       <div className="flex">
         <Icon

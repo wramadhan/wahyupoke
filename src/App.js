@@ -6,7 +6,7 @@ import Home from "./page/Home";
 function App() {
   return (
     <Router>
-      <div className="fixed w-full">
+      <div className="fixed z-50 w-full">
         <Navbar />
       </div>
       <Routes>
