@@ -53,10 +53,10 @@ const Detail = () => {
                                     <div className='smmax:my-4 px-[15px]'>
                                         <div className='flex justify-between px-[1px]'>
                                             <h1 className='smmlmax:text-base font-bold text-primary text-[25px]'>{item.stat.name}</h1>
-                                            <h1 className='font-bold text-primary smmlmax:text-base text-[25px]'>{item.base_stat}/300</h1>
+                                            <h1 className='font-bold text-primary smmlmax:text-base text-[25px]'>{item.base_stat}/200</h1>
                                         </div>
                                         <div className='w-full rounded-full border-2 border-primary h-[16px]'>
-                                            <div className='w-full shadow-inner shadow-tertiary rounded-full bg-primary h-full' style={{ "width": item.base_stat / 3 + "%" }}>
+                                            <div className='w-full shadow-inner shadow-tertiary rounded-full bg-primary h-full' style={{ "width": item.base_stat / 2 + "%" }}>
                                             </div>
                                         </div>
                                     </div>
