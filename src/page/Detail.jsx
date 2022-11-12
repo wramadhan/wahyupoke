@@ -96,7 +96,14 @@ const Detail = () => {
                     </div>
                     <div className='border-4 lgmax:w-full border-primary w-[49%] h-[350px] rounded-2xl'>
                         <h1 className='w-full bg-primary rounded-t-md h-50 text-center text-secondary font-bold text-[30px] shadow-inner shadow-tertiary text-2xl py-1'>Skills</h1>
-                        <div className='px-[15px] font-bold text-[30px] w-full h-[305px] rounded-b-lg bg-primary/10'>
+                        <div className='overflow-y-auto px-[15px] font-bold text-[30px] w-full h-[305px] rounded-b-lg bg-primary/10'>
+                            {dataDetail.moves ? (dataDetail.moves.map((item, index) => {
+                                return (
+                                    <div key={index}>
+                                        <li>{item.move.name};</li>
+                                    </div>
+                                )
+                            })) : (<h1>not yet known</h1>)}
                         </div>
                     </div>
                 </div>
