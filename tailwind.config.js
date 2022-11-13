@@ -26,6 +26,7 @@ module.exports = {
       primary: "#134473",
       secondary: "#FFFFFF",
       tertiary: "#000000",
+      darkprime: "#ababab",
     },
     extend: {},
   },
