@@ -51,7 +51,7 @@ const Detail = () => {
                                 </div>
                             </div>
                         </div>
-                        {/* Stats Start */}
+
                         <div className='border-4 h-[381px] dark:border-darkprime border-primary rounded-2xl lgmax:w-full w-[724px] shadow-lg shadow-tertiary/40'>
                             <h1 className='w-full bg-primary dark:bg-darkprime rounded-t-md h-50 dark:text-primary text-center text-secondary font-bold text-[30px] shadow-inner shadow-tertiary text-2xl py-1'>Stats</h1>
                             <div className='overflow-y-auto h-[330px] rounded-b-xl bg-primary/10'>
@@ -72,7 +72,7 @@ const Detail = () => {
                                 })}
                             </div>
                         </div>
-                        {/* Stats End */}
+
                     </div>
                     <div className='my-[25px] lg:flex justify-between dark:text-darkprime text-primary'>
                         <div className='shadow-lg shadow-tertiary/30 border-4 lgmax:my-6 lgmax:w-full dark:border-darkprime border-primary w-[49%] h-[350px] rounded-2xl'>
@@ -104,7 +104,7 @@ const Detail = () => {
                         </div>
                         <div className='shadow-lg shadow-tertiary/30 border-4 dark:border-darkprime lgmax:w-full border-primary w-[49%] h-[350px] rounded-2xl'>
                             <h1 className='w-full bg-primary dark:bg-darkprime dark:text-primary rounded-t-md h-50 text-center text-secondary font-bold text-[30px] shadow-inner shadow-tertiary text-2xl py-1'>Skills</h1>
-                            <div className='shadow-inner shadow-tertiary overflow-y-auto px-[15px] font-bold text-[30px] w-full h-[305px] rounded-b-lg bg-primary/10'>
+                            <div className='shadow-inner shadow-tertiary overflow-y-auto px-[15px] font-bold text-[30px] smmlmax:text-2xl w-full h-[305px] rounded-b-lg bg-primary/10'>
                                 {dataDetail.moves ? (dataDetail.moves.map((item, index) => {
                                     return (
                                         <div key={index}>

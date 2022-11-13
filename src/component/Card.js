@@ -10,7 +10,7 @@ const Card = ({ name, id, klik }) => {
         backgroundImage: `url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png")`,
       }}
     >
-      <div className="duration-500 w-full flex justify-center flex-col bg-primary/20 dark:hover:bg-darkprime hover:bg-primary/100 dark:hover:text-primary hover:text-secondary text-transparent text-center h-5/6">
+      <div className="duration-300 w-full flex justify-center flex-col bg-primary/20 dark:hover:bg-darkprime hover:bg-primary/100 dark:hover:text-primary hover:text-secondary text-transparent text-center h-5/6">
         Click to see Detail{" "}
         <Icon className="text-center w-full text-5xl" icon="entypo:eye" />
       </div>
