@@ -25,7 +25,7 @@ const Detail = () => {
 
         axios(config)
             .then(function (response) {
-                // setDataDetail(response.data);
+                setDataDetail(response.data);
                 console.log(response.data.types);
             })
             .catch(function (error) {

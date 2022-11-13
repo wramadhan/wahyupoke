@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { dark, handleDark } = useAppContext(useAppContext);
-  const [color, setColor] = useState("");
-  const [colorDark, setColorDark] = useState("text-darkprime");
+  const [color, setColor] = useState("bg-secondary");
+  const [colorDark, setColorDark] = useState("bg-primary");
   const [textColor, setTextColor] = useState("text-primary");
-  const [textColorDark, setTextColorDark] = useState("");
+  const [textColorDark, setTextColorDark] = useState("text-darkprime");
 
   const changeColor = () => {
     if (window.scrollY >= 80) {
