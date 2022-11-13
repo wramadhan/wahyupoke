@@ -1,38 +1,37 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Card from "../component/Card";
-import axios from "axios";
+// import axios from "axios";
 import { Icon } from '@iconify/react';
 import { useNavigate } from "react-router-dom";
 import { useAppContext } from "../context/Store";
 
 const Home = () => {
-  const [datas, setDatas] = useState();
-  const [page, setPage] = useState(0);
-  const [status, setStatus] = useState();
+  // const [datas, setDatas] = useState();
+  // const [page, setPage] = useState(0);
+  // const [status, setStatus] = useState();
   const navigate = useNavigate();
-  const { dark } =
+  const { dark, datas, page, status, setPage } =
     useAppContext(useAppContext);
+  // useEffect(() => {
+  // handleGetData();
+  // }, [page]);
 
-  useEffect(() => {
-    handleGetData();
-  }, [page]);
+  // const handleGetData = () => {
+  //   var config = {
+  //     method: 'get',
+  //     url: 'https://pokeapi.co/api/v2/pokemon?offset=' + page + '&limit=20',
+  //   };
 
-  const handleGetData = () => {
-    var config = {
-      method: 'get',
-      url: 'https://pokeapi.co/api/v2/pokemon?offset=' + page + '&limit=20',
-    };
+  //   axios(config)
+  //     .then(function (response) {
+  //       setDatas(response.data.results);
+  //       setStatus(response.data);
+  //     })
+  //     .catch(function (error) {
+  //       console.log(error);
+  //     });
 
-    axios(config)
-      .then(function (response) {
-        setDatas(response.data.results);
-        setStatus(response.data);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-
-  };
+  // };
   const handleDetailPage = (item, index) => {
     navigate(`/detail/${index + page + 1}`, {
       state: {
