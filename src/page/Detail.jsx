@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useAppContext } from "../context/Store";
 import { Icon } from '@iconify/react';
 import { Link } from "react-router-dom";
+import ReactLoading from 'react-loading';
 
 const Detail = () => {
     const [dataDetail, setDataDetail] = useState();
@@ -24,7 +25,7 @@ const Detail = () => {
 
         axios(config)
             .then(function (response) {
-                setDataDetail(response.data);
+                // setDataDetail(response.data);
                 console.log(response.data.types);
             })
             .catch(function (error) {
@@ -115,7 +116,7 @@ const Detail = () => {
                             </div>
                         </div>
                     </div>
-                </div>) : null}
+                </div>) : <div className='h-screen'><ReactLoading type={'bars'} className="mx-auto duration-200" color={dark === "dark" ? "#ababab" : "#134473"} height={'30%'} width={'30%'} /></div>}
             </div>
         </div>
     )
