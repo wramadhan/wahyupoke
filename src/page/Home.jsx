@@ -52,8 +52,8 @@ const Home = () => {
               </div>)
           })) : (<p>Loading...</p>)}
         </div>
-        {status ? (status.previous ? (<button className="dark:text-darkprime text-primary fixed inset-y-0 left-0 text-7xl" ><Icon onClick={() => setPage(page - 20)} icon="icon-park-outline:handle-triangle" rotate={3} /></button>) : null) : null}
-        {status ? (status.next ? (<button className="dark:text-darkprime text-primary fixed inset-y-0 right-0 text-7xl" ><Icon onClick={() => setPage(page + 20)} icon="icon-park-outline:handle-triangle" rotate={1} /></button>) : null) : null}
+        {status ? (status.previous ? (<div className="flex flex-col justify-center dark:text-darkprime text-primary fixed inset-y-0 left-0 text-7xl" ><button className="rounded-full"><Icon className="rounded-full" onClick={() => setPage(page - 20)} icon="icon-park-outline:handle-triangle" rotate={3} /></button></div>) : null) : null}
+        {status ? (status.next ? (<div className="flex flex-col justify-center dark:text-darkprime text-primary fixed inset-y-0 right-0 text-7xl" ><button className="rounded-full"><Icon onClick={() => setPage(page + 20)} icon="icon-park-outline:handle-triangle" className="rounded-full" rotate={1} /></button></div>) : null) : null}
       </div>
     </div>
   );
