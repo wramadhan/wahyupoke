@@ -20,7 +20,7 @@ export const useAppContext = () => {
 };
 
 export const Store = ({ children }) => {
-  const [dark, setDark] = useState("dark");
+  const [dark, setDark] = useState("");
   return (
     <AppContext.Provider
       value={{
