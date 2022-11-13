@@ -5,7 +5,7 @@ const Card = ({ name, id, klik }) => {
   return (
     <div
       onClick={klik}
-      className="m-[25px] duration-200 w-[180px] bg-cover bg-center h-[180px] dark:border-darkprime border-primary border-4 rounded-2xl"
+      className="m-[25px] shadow-lg shadow-tertiary/40 duration-200 w-[180px] bg-cover bg-center h-[180px] dark:border-darkprime border-primary border-4 rounded-2xl"
       style={{
         backgroundImage: `url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png")`,
       }}
