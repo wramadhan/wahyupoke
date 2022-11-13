@@ -2,7 +2,6 @@ import React from "react";
 import { Icon } from "@iconify/react";
 
 const Card = ({ name, id, klik }) => {
-  // console.log(name);
   return (
     <div
       onClick={klik}

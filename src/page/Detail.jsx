@@ -26,7 +26,6 @@ const Detail = () => {
         axios(config)
             .then(function (response) {
                 setDataDetail(response.data);
-                console.log(response.data.types);
             })
             .catch(function (error) {
                 console.log(error);
@@ -76,9 +75,9 @@ const Detail = () => {
                         {/* Stats End */}
                     </div>
                     <div className='my-[25px] lg:flex justify-between dark:text-darkprime text-primary'>
-                        <div className='border-4 lgmax:my-6 lgmax:w-full dark:border-darkprime border-primary w-[49%] h-[350px] rounded-2xl'>
+                        <div className='shadow-lg shadow-tertiary/30 border-4 lgmax:my-6 lgmax:w-full dark:border-darkprime border-primary w-[49%] h-[350px] rounded-2xl'>
                             <h1 className='w-full dark:bg-darkprime dark:text-primary bg-primary rounded-t-md h-50 text-center text-secondary font-bold text-[30px] shadow-inner shadow-tertiary text-2xl py-1'>Details</h1>
-                            <div className='overflow-y-auto overflow-x-auto px-[15px] font-bold smmlmax:text-2xl text-[30px] w-full h-[305px] rounded-b-lg bg-primary/10'>
+                            <div className='shadow-inner shadow-tertiary overflow-y-auto overflow-x-auto px-[15px] font-bold smmlmax:text-2xl text-[30px] w-full h-[305px] rounded-b-lg bg-primary/10'>
                                 <h1>Species: {dataDetail.species.name}</h1>
                                 <h2 className='flex my-4'>Types:&nbsp;</h2>
                                 <div className=''>
@@ -103,9 +102,9 @@ const Detail = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='border-4 dark:border-darkprime lgmax:w-full border-primary w-[49%] h-[350px] rounded-2xl'>
+                        <div className='shadow-lg shadow-tertiary/30 border-4 dark:border-darkprime lgmax:w-full border-primary w-[49%] h-[350px] rounded-2xl'>
                             <h1 className='w-full bg-primary dark:bg-darkprime dark:text-primary rounded-t-md h-50 text-center text-secondary font-bold text-[30px] shadow-inner shadow-tertiary text-2xl py-1'>Skills</h1>
-                            <div className='overflow-y-auto px-[15px] font-bold text-[30px] w-full h-[305px] rounded-b-lg bg-primary/10'>
+                            <div className='shadow-inner shadow-tertiary overflow-y-auto px-[15px] font-bold text-[30px] w-full h-[305px] rounded-b-lg bg-primary/10'>
                                 {dataDetail.moves ? (dataDetail.moves.map((item, index) => {
                                     return (
                                         <div key={index}>
